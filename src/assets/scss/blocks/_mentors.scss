@@ -1,0 +1,77 @@
+.mentors {
+  // .swiper-slide {
+  //   display: block;
+  //   height: 90%;
+  //   text-align: left;
+  // }
+  display: none;
+}
+
+.mentors__list {
+  span {
+    width: 100%;
+  }
+}
+
+.mentors__item {
+  max-width: 390px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+
+.info-box {
+  display: block;
+  margin: 0;
+  margin-left: 24px;
+  padding-bottom: 20px;
+}
+
+.info-box__heading--margin {
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.info-box__desc--margin {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+@include media-max(940px) {
+  .mentors__list {
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .mentorsv__item {
+    padding-bottom: 10px;
+  }
+
+  .courses__item__info-box {
+    padding: 5px;
+  }
+
+  .info-box__heading {
+    display: block;
+    margin: 0;
+    font-family: "Myriad", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 33px;
+    color: #253131;
+  }
+
+  .info-box__desc {
+    margin: 0;
+    margin-left: 10px;
+    font-family: "Myriad", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 21px;
+    color: rgba(37, 49, 49, 0.7);
+  }
+
+  .info-box__desc--mobile {
+    display: block;
+  }
+}

@@ -1,0 +1,28 @@
+/* myriad-regular - latin */
+@font-face {
+  font-family: "Myriad";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/MyriadPro-Regular.woff2") format("woff2"); /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+@font-face {
+  font-family: "Myriad";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/MyriadPro-Bold.woff2") format("woff2"); /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+@font-face {
+  font-family: "Myriad";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/MyriadPro-SemiboldIt.woff2") format("woff2"); /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+@font-face {
+  font-family: "Myriad";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/MyriadPro-Light.woff2") format("woff2"); /* Chrome 26+, Opera 23+, Firefox 39+ */
+}

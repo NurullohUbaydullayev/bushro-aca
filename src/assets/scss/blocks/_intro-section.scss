@@ -1,0 +1,240 @@
+.intro-section {
+  //   position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  background-image: url("../../images/intro.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #444;
+}
+
+.intro {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  clip-path: polygon(
+    100% 66%,
+    95% 72%,
+    89% 77%,
+    81% 83%,
+    73% 88%,
+    65% 91%,
+    56% 93%,
+    46% 93%,
+    38% 92%,
+    28% 89%,
+    20% 85%,
+    13% 80%,
+    6% 74%,
+    0 66%,
+    0 100%,
+    100% 100%
+  );
+  background-color: #fff;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 90px);
+  height: 160px;
+  width: 180px;
+  clip-path: ellipse(25% 40% at 50% 100%);
+  background-color: #fff;
+}
+
+.intro__heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 48px;
+  line-height: 70px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  font-weight: 300;
+  color: #fff;
+  font-family: "Myriad", sans-serif;
+
+  strong {
+    font-size: 70px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    background: linear-gradient(to right, #fff200 0%, #fff 50%, #fff200 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.intro__contact-number {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 600;
+  font-family: "Myriad", sans-serif;
+  color: #fff;
+
+  a {
+    color: #edd605;
+    text-decoration: none;
+  }
+}
+
+.intro__downarrow {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  bottom: 28px;
+  left: calc(50% - 9px);
+  z-index: 20;
+  animation: downarrow 1s linear infinite alternate 0s forwards;
+  cursor: pointer;
+}
+
+// .question-icon-wrapper {
+//   display: inline-block;
+//   padding: 10px;
+//   background-color: #edd605;
+// }
+
+.question-icon-wrapper {
+  display: inline-block;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  padding: 13px;
+  background-color: #edd605;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 100px 3px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 0px 0px 100px 3px rgba(0, 0, 0, 0.63);
+  box-shadow: 0px 0px 100px 3px rgba(0, 0, 0, 0.63);
+}
+
+.question-icon {
+  display: inline-block;
+  padding: 5px;
+  font-size: 30px;
+  line-height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #edd605;
+}
+
+.contact-list {
+  position: absolute;
+  bottom: 120%;
+  left: 10px;
+  padding: 10px;
+  background-color: #fff;
+  list-style: none;
+  border-radius: 10px;
+}
+
+.contact-list {
+  display: none;
+  transition: 0.3s;
+}
+
+.contact-list--active {
+  display: inline-block;
+  a {
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    color: #333;
+    i {
+      margin-right: 8px;
+      font-size: 24px;
+    }
+    span {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+
+.contact-list__item > a:hover {
+  color: #edd605;
+}
+
+@keyframes downarrow {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    bottom: 18px;
+    opacity: 0.8;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .intro__heading {
+    font-size: 38px;
+    line-height: 56px;
+
+    strong {
+      font-size: 56px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .intro__contact-number {
+    bottom: 16%;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .intro__heading {
+    font-size: 30px;
+    line-height: 34px;
+
+    strong {
+      font-size: 44px;
+    }
+  }
+
+  .intro__contact-number {
+    a {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .intro__heading {
+    font-size: 24px;
+    line-height: 38px;
+
+    strong {
+      font-size: 36px;
+    }
+  }
+}

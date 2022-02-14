@@ -1,0 +1,218 @@
+footer {
+  background-color: #262626;
+}
+
+.footerWrapper {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerLogos {
+  width: 25%;
+  display: flex;
+}
+.logosWrapper {
+  display: flex;
+  margin-left: 20px;
+  font-size: 32px;
+}
+.instagramWrapper {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.vkWrapper {
+  width: 50px;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #3c3c3c;
+}
+
+.instagramWrapper {
+  width: 50px;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #3c3c3c;
+  div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+.list,
+.list2,
+.list3 {
+  width: 25%;
+  height: 150px;
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  flex-wrap: wrap;
+  padding: 5px;
+  span {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+
+  li {
+    margin-top: 8px;
+  }
+}
+
+.listItems {
+  transition: all 0.4s ease;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.iconPhone,
+.email,
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .envelope {
+    margin-right: 10px;
+    height: 100%;
+    color: #e2d600;
+    font-size: 14px;
+  }
+}
+
+.locat,
+.phone {
+  width: 15px;
+  height: 15px;
+  margin-bottom: 12px;
+  color: #e2d600;
+  margin-right: 10px;
+}
+
+.email {
+  width: 15px;
+  height: 15px;
+}
+
+.contactsLinkItems {
+  transition: all 0.4s ease;
+  &:hover {
+    color: #e2d600;
+    cursor: pointer;
+  }
+}
+
+.centerLocations {
+  width: 100%;
+  margin-bottom: 70px;
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  list-style: none;
+}
+
+.centerLocationItems {
+  border: 4px solid #f3f3f3;
+  border-right: none;
+  width: 240px;
+  padding: 30px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  &:last-child {
+    border-right: 4px solid #f3f3f3;
+  }
+
+  &:hover {
+    background-color: #676767;
+    color: #fff;
+  }
+
+  span {
+    font-family: sans-serif;
+    opacity: 0.7;
+  }
+  .locationWrapper {
+    display: flex;
+    font-family: sans-serif;
+    margin-top: 14px;
+  }
+  .numbersWrapper {
+    display: flex;
+    font-family: sans-serif;
+    margin-top: 14px;
+    .numbers {
+      display: flex;
+      flex-direction: column;
+      span {
+        margin-bottom: 5px;
+        color: black;
+        font-weight: bold;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.centerLocationItems:hover .numbers span {
+  color: #fff;
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .footerLogos {
+    width: 50%;
+    margin-top: 50px;
+  }
+  .list,
+  .list2,
+  .list3 {
+    width: 50%;
+  }
+  .footerWrapper {
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    ul {
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .container {
+    max-width: 700px;
+  }
+  .location {
+    text-align: center;
+    width: 60%;
+  }
+
+  .centerLocationItems {
+    border-right: 4px solid #f3f3f3;
+  }
+}
+
+@media (max-width: 1200px) {
+  .centerLocationItems {
+    border-right: 4px solid #f3f3f3;
+  }
+}

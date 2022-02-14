@@ -1,0 +1,5 @@
+@mixin media-max($size: 144px) {
+	@media only screen and (max-width: $size) {
+		@content;
+	}
+}
