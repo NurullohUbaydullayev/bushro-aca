@@ -7,12 +7,16 @@ import nextBtnIcon from "../../assets/images/next.svg";
 import prevBtnIcon from "../../assets/images/prev.svg";
 
 // Images
-import Arabic from "../../assets/images/arabic.png";
-import English from "../../assets/images/english.png";
-import Russian from "../../assets/images/russian.png";
-import Turkish from "../../assets/images/turkish.png";
-import Mnemonika from "../../assets/images/mnemonika.png";
-import Kids from "../../assets/images/kids.png";
+import Arab from "../../assets/images/arab.jpg";
+import Ingliz from "../../assets/images/ingliz.jpg";
+import Turk from "../../assets/images/turk.jpg";
+import Rus from "../../assets/images/rus.jpg";
+import ArabCefr from "../../assets/images/arabcefr.jpg";
+import InglizIelts from "../../assets/images/inglizielts.jpg";
+import MATH from "../../assets/images/math.jpg";
+import SAT from "../../assets/images/sat.jpg";
+import Kids from "../../assets/images/kids.jpg";
+import Maktab from "../../assets/images/maktab.jpg";
 
 function Courses() {
   const [SlidesCount, setSlidesCount] = useState(3);
@@ -32,65 +36,65 @@ function Courses() {
       id: 1,
       name: "Arab tili",
       description: "(10 ta o'rin mavjud)",
-      img: "https://picsum.photos/390/200",
+      img: Arab,
     },
 
     {
       id: 2,
       name: "Ingliz tili",
       description: "(10 ta o'rin mavjud)",
-      img: "https://picsum.photos/390/200",
+      img: Ingliz,
     },
 
     {
       id: 3,
       name: "Turk tili",
       description: "(12 ta o'rin mavjud)",
-      img: "https://picsum.photos/390/200",
+      img: Turk,
     },
     {
       id: 4,
       name: "Rus tili",
       description: "(10 ta o'rin mavjud)",
-      img: "https://picsum.photos/390/200",
+      img: Rus,
     },
 
     {
       id: 5,
       name: "Arab tili, CEFR",
       description: "(10 ta o'rin mavjud)",
-      img: "https://picsum.photos/390/200",
+      img: ArabCefr,
     },
 
     {
       id: 6,
       name: "Ingliz tili, IELTS",
       description: "(12 ta o'rin mavjud)",
-      img: "https://picsum.photos/390/200",
+      img: InglizIelts,
     },
     {
       id: 7,
       name: "Math in English",
       description: "(12 ta o'rin mavjud)",
-      img: "https://picsum.photos/390/200",
+      img: MATH,
     },
     {
       id: 8,
       name: "SAT",
       description: "(12 ta o'rin mavjud)",
-      img: "https://picsum.photos/390/200",
+      img: SAT,
     },
     {
       id: 9,
       name: "Bushro kids",
       description: "(20 ta o'rin mavjud)",
-      img: "https://picsum.photos/390/200",
+      img: Kids,
     },
     {
       id: 10,
       name: "Maktabgacha ta'lim",
       description: "(20 ta o'rin mavjud)",
-      img: "https://picsum.photos/390/200",
+      img: Maktab,
     },
   ];
 

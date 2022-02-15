@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const PassTests = () => {
   return (
     <>
@@ -10,7 +12,13 @@ const PassTests = () => {
             Testda yuqori natijaga erishgan talabalar uchun maxsus chegirma taqdim
             etiladi!
           </p>
-          <button className="tests__btn">Ro`yxatdan o`tish</button>
+
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe82X_jibwpANL7siFYG1VqpQHtwKLsqRT9XiRTo-E5K7wxqA/viewform">
+            <a className="tests__btn" target="_blank">
+              Ro`yxatdan o`tish
+            </a>
+          </Link>
+          {/* <button className="tests__btn">Ro`yxatdan o`tish</button> */}
         </div>
       </section>
     </>

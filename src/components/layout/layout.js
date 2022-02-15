@@ -135,7 +135,7 @@ const Layout = ({ children }) => {
               </Link>
             </li>
             <li className="header__list-item">
-              <Link href="#branches">
+              <Link href="/#branches">
                 <a className="header__link">Manzil</a>
               </Link>
             </li>
@@ -210,41 +210,64 @@ const Layout = ({ children }) => {
               </div>
               <div className="logosWrapper">
                 <div className="vkWrapper">
-                  <FontAwesomeIcon icon={faVk} />
+                  <Link href="https://t.me/bushroacademy">
+                    <a target="_blank">
+                      <i className="fa fa-telegram"></i>
+                    </a>
+                  </Link>
                 </div>
                 <div className="instagramWrapper">
-                  <FontAwesomeIcon icon={faInstagram} />
+                  <Link href="https://www.instagram.com/bushroacademy/">
+                    <a target="_blank">
+                      <i className="fa fa-instagram"></i>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </li>
           </ul>
           <ul className="list">
             <span>Menu</span>
-            <li className="listItems">About</li>
-            <li className="listItems">Programma cost</li>
-            <li className="listItems">Kurs</li>
+            <li className="listItems">
+              <Link href="/">
+                <a>Bosh sahifa</a>
+              </Link>
+            </li>
+            <li className="listItems">
+              <Link href="/about">
+                <a>Biz haqimizda</a>
+              </Link>
+            </li>
+            <li className="listItems">
+              <Link href="/about#contact">
+                <a>Kontakt</a>
+              </Link>
+            </li>
           </ul>
           <ul className="list2">
-            <span>Adress</span>
-            <li>Main office</li>
+            <span>Manzil</span>
+            <li>Asosiy filial</li>
             <div className="location">
               <FontAwesomeIcon className="locat" icon={faMapMarkerAlt} />
-              <li> Lorem ipsum dolor sit amet consectetur adipisicing!</li>
+              <li> Manzil: Yunusobod tumani, Chinobod ko`chasi 1</li>
             </div>
           </ul>
           <ul className="list3">
-            <span>Contact</span>
+            <span>Kontakt</span>
             <div className="iconPhone">
               <FontAwesomeIcon className="phone" icon={faPhoneAlt} />
               <div className="numbers">
-                <li className="contactsLinkItems">1321343142</li>
-                <li className="contactsLinkItems">7576558758</li>
+                <li className="contactsLinkItems">
+                  <Link href="tel:+998993407080">
+                    <a>+998 (99) 340-70-80</a>
+                  </Link>
+                </li>
+                <li className="contactsLinkItems">
+                  <Link href="tel:+998994844406">
+                    <a>+998 (99) 484 44 06</a>
+                  </Link>
+                </li>
               </div>
-            </div>
-
-            <div className="email">
-              <FontAwesomeIcon className="envelope" icon={faEnvelope} />
-              <li className="contactsLinkItems">Lorem, ipsum dolor.</li>
             </div>
           </ul>
         </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import Childrens from "../../assets/images/childrens.png";
 import Marker from "../../assets/images/marker.png";
@@ -39,7 +40,12 @@ const Informations = () => {
                 <p>Qulay narx!</p>
               </li>
             </ul>
-            <button className="info__btn">Kurslar</button>
+
+            <Link href="https://t.me/bushroacademy">
+              <a className="info__btn" target="_blank">
+                Kurslar
+              </a>
+            </Link>
           </div>
         </div>
       </section>

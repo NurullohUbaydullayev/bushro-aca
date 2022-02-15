@@ -17,7 +17,9 @@ const News = () => {
   const fetchDatas = async () => {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
 
-    const res = await fetch("https://bushro-backend.herokuapp.com/news", {
+    const API = "https://bushro-backend.herokuapp.com";
+
+    const res = await fetch(API + "/news", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -43,17 +45,14 @@ const News = () => {
   async function handleDeleteData(evt) {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
 
-    const res = await fetch(
-      `https://bushro-backend.herokuapp.com/news/${evt.target.dataset.id}`,
-      {
-        headers: {
-          token: token,
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        method: "DELETE",
-      }
-    );
+    const res = await fetch(`${API}/news/${evt.target.dataset.id}`, {
+      headers: {
+        token: token,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    });
 
     const result = await res.json();
     fetchDatas();
@@ -68,7 +67,7 @@ const News = () => {
     formData.append("news_title", elNameInput.current.value);
     formData.append("news_info", elInfoInput.current.value);
 
-    const res = await fetch("https://bushro-backend.herokuapp.com/news", {
+    const res = await fetch(API + "/news", {
       headers: {
         token: token,
       },

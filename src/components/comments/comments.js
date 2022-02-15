@@ -42,7 +42,7 @@ const Comments = () => {
 
   return (
     <div className="comments">
-      <h2 className="comments__heading">Отзывы о нас</h2>
+      <h2 className="comments__heading">Biz haqimizda sharhlar</h2>
       <Swiper
         slidesPerView={1}
         loop={true}
@@ -66,96 +66,9 @@ const Comments = () => {
                 />
                 <h3 className="comments__username">{row.comment_name}</h3>
                 <p className="comments__text">{row.comment_info}</p>
-                <a className="comments__link" href="#">
-                  Читать полностью на Flamp{" "}
-                </a>
               </div>
             </SwiperSlide>
           ))}
-        {/* <SwiperSlide>
-          <div>
-            <Image
-              className="comments__user-img"
-              src={img1}
-              alt="user comments "
-              width="100"
-              height="100"
-            />
-            <h3 className="comments__username">HBV</h3>
-            <p className="comments__text">
-              Очень благодарен этому учебному заведению за их труды и работу над моими
-              навыками английского языка. Проходил обучение с 7 по 9 класс. И знаете,
-              результат был на ура. Помню что по школьной программе нам давали мало
-              знаний. Именно по этому родители отправили меня сюда.
-            </p>
-            <a className="comments__link" href="#">
-              Читать полностью на Flamp{" "}
-            </a>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <Image
-              className="comments__user-img"
-              src={img1}
-              alt="user comments "
-              width="100"
-              height="100"
-            />
-            <h3 className="comments__username">HBV</h3>
-            <p className="comments__text">
-              Очень благодарен этому учебному заведению за их труды и работу над моими
-              навыками английского языка. Проходил обучение с 7 по 9 класс. И знаете,
-              результат был на ура. Помню что по школьной программе нам давали мало
-              знаний. Именно по этому родители отправили меня сюда.
-            </p>
-            <a className="comments__link" href="#">
-              Читать полностью на Flamp{" "}
-            </a>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <Image
-              className="comments__user-img"
-              src={img1}
-              alt="user comments "
-              width="100"
-              height="100"
-            />
-            <h3 className="comments__username">HBV</h3>
-            <p className="comments__text">
-              Очень благодарен этому учебному заведению за их труды и работу над моими
-              навыками английского языка. Проходил обучение с 7 по 9 класс. И знаете,
-              результат был на ура. Помню что по школьной программе нам давали мало
-              знаний. Именно по этому родители отправили меня сюда.
-            </p>
-            <a className="comments__link" href="#">
-              Читать полностью на Flamp{" "}
-            </a>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <Image
-              className="comments__user-img"
-              src={img1}
-              alt="user comments "
-              width="100"
-              height="100"
-            />
-            <h3 className="comments__username">HBV</h3>
-            <p className="comments__text">
-              Очень благодарен этому учебному заведению за их труды и работу над моими
-              навыками английского языка. Проходил обучение с 7 по 9 класс. И знаете,
-              результат был на ура. Помню что по школьной программе нам давали мало
-              знаний. Именно по этому родители отправили меня сюда.
-            </p>
-            <a className="comments__link" href="#">
-              Читать полностью на Flamp{" "}
-            </a>
-          </div>
-        </SwiperSlide> */}
       </Swiper>{" "}
       <div className="comments__controllers">
         <button className="prevButton comments__controllers-btn">

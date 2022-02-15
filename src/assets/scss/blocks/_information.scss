@@ -49,13 +49,15 @@
   }
 }
 .info__btn {
+  display: inline-block;
   color: black;
   border-radius: 50px;
   background: #edd605;
   border: 2px solid #edd605;
   font-weight: bold;
   font-family: "Myriad", sans-serif;
-  padding: 20px 30px;
+  padding: 20px 80px;
+  text-align: center;
   line-height: 16px;
   width: 250px;
   transition: 0.3s;

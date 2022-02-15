@@ -6,10 +6,12 @@ const Login = () => {
   const elPasswordInput = useRef(null);
   const [message, setMessage] = useState("");
 
+  const API = "https://bushro-backend.herokuapp.com";
+
   async function handleSubmit(evt) {
     evt.preventDefault();
 
-    const res = await fetch("https://bushro-backend.herokuapp.com/login", {
+    const res = await fetch(API + "/login", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

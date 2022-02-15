@@ -7,10 +7,12 @@ import Loader from "../../src/assets/images/loader.gif";
 const Orders = () => {
   const [data, setData] = useState([]);
 
+  const API = "https://bushro-backend.herokuapp.com";
+
   useEffect(() => {
     async function func() {
       const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
-      const res = await fetch("https://bushro-backend.herokuapp.com/allBooking", {
+      const res = await fetch(API + "/allBooking", {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",

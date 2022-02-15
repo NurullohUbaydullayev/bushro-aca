@@ -12,10 +12,12 @@ const Comments = () => {
   const message = useRef(null);
   const [data, setData] = useState([]);
 
+  const API = "https://bushro-backend.herokuapp.com";
+
   async function fetchDatas() {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
 
-    const res = await fetch("https://bushro-backend.herokuapp.com/allComments", {
+    const res = await fetch(API + "/allComments", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -41,17 +43,14 @@ const Comments = () => {
   async function handleDeleteData(evt) {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
 
-    const res = await fetch(
-      `https://bushro-backend.herokuapp.com/comment/${evt.target.dataset.id}`,
-      {
-        headers: {
-          token: token,
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        method: "DELETE",
-      }
-    );
+    const res = await fetch(`${API}/comment/${evt.target.dataset.id}`, {
+      headers: {
+        token: token,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    });
 
     const result = await res.json();
     fetchDatas();
@@ -73,7 +72,7 @@ const Comments = () => {
     formData.append("comment_info", inputInfoValue);
     console.log(formData);
 
-    fetch("https://bushro-backend.herokuapp.com/newComment", {
+    fetch(API + "/newComment", {
       method: "POST",
       headers: {
         token: token,

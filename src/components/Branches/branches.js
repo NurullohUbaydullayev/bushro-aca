@@ -22,13 +22,13 @@ const Branches = () => {
         ) : (
           <iframe
             className="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.076321147275!2d69.2188748150504!3d41.35069480623253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c6bc8ca661d%3A0xd74b44fc8fe0f672!2z0KLRg9GA0LjQvdGB0LrQuNC5INCf0L7Qu9C40YLQtdGF0L3QuNGH0LXRgdC60LjQuSDQo9C90LjQstC10YDRgdC40YLQtdGC!5e0!3m2!1sru!2s!4v1641576948664!5m2!1sru!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1498.7075324510986!2d69.10704208487756!3d41.299833295795764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf6735cba52c2c691!2zNDHCsDE3JzU5LjQiTiA2OcKwMDYnMjguOSJF!5e0!3m2!1sru!2s!4v1644941029782!5m2!1sru!2s"
             width="100%"
-            height="450"
-            style={{ border: "0" }}
+            height={450}
+            style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
-          ></iframe>
+          />
         )}
       </section>
       <section className="branches" id="branches">
