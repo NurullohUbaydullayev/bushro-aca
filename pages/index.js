@@ -15,8 +15,43 @@ export default function Home({ post }) {
   return (
     <>
       <Head>
-        <title>Bushro academy</title>
+        <title>Bushro o`quv markazi</title>
+        <meta charset="UTF-8" />
+        <meta
+          name="keywords"
+          content="Bushro, Bushro o`quv markazi, akademiya, arab tili, ingliz tili, turk tili, arzon"
+        />
+        <meta name="Address" content="Yunusobod tumani, Chinobod ko`chasi 1" />
+        <meta
+          name="description"
+          content="Arab, Ingliz, Rus, Turk tillariga ixtisoslashtirilgan Bushro oquv markazi."
+        ></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:locale" content="uz_UZ" />
+        <meta property="og:title" content="Bushro akademiyasi" />
+        <meta
+          property="og:description"
+          content="Markaz arab, rus, ingliz tillariga va maktabgacha bolgan talimga ixtisoslashgan"
+        />
+        <meta property="og:url" content="bushroacademy.uz" />
+        <meta property="og:site_name" content="Bushro akademiyasi" />
+
+        <meta
+          property="og:image"
+          content="https://telegra.ph/file/080e897b8a23e8af4d4c4.jpg"
+        />
+
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:site" content="Bushro" />
+        <meta property="twitter:title" content="Bushro academy" />
+        <meta
+          property="twitter:description"
+          content="Bushro oquv markazining sifatli til kurslarida talim oling"
+        />
+        <meta
+          property="twitter:image"
+          content="https://telegra.ph/file/080e897b8a23e8af4d4c4.jpg"
+        />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
