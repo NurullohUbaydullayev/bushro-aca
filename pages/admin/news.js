@@ -17,7 +17,7 @@ const News = () => {
   const fetchDatas = async () => {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
 
-    const API = "https://bushro-backend.herokuapp.com";
+    const API = "http://46.101.204.245:5001";
 
     const res = await fetch(API + "/news", {
       headers: {
@@ -45,7 +45,7 @@ const News = () => {
   async function handleDeleteData(evt) {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
 
-    const res = await fetch(`${API}/news/${evt.target.dataset.id}`, {
+    const res = await fetch(`http://46.101.204.245:5001/news/${evt.target.dataset.id}`, {
       headers: {
         token: token,
         Accept: "application/json",
@@ -67,7 +67,7 @@ const News = () => {
     formData.append("news_title", elNameInput.current.value);
     formData.append("news_info", elInfoInput.current.value);
 
-    const res = await fetch(API + "/news", {
+    const res = await fetch("http://46.101.204.245:5001" + "/news", {
       headers: {
         token: token,
       },
@@ -141,12 +141,10 @@ const News = () => {
                       <td>{row.news_name}</td>
                       <td>
                         <Image
-                          src={`https://bushro-backend.herokuapp.com/${row.news_img}`}
+                          src={`http://46.101.204.245:5001/${row.news_img}`}
                           width="200"
                           height="100"
-                          loader={() =>
-                            `https://bushro-backend.herokuapp.com/${row.news_img}`
-                          }
+                          loader={() => `http://46.101.204.245:5001/${row.news_img}`}
                           alt="Bayram"
                         />
                       </td>

@@ -12,7 +12,7 @@ const Comments = () => {
   const message = useRef(null);
   const [data, setData] = useState([]);
 
-  const API = "https://bushro-backend.herokuapp.com";
+  const API = "http://46.101.204.245:5001";
 
   async function fetchDatas() {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
@@ -142,13 +142,11 @@ const Comments = () => {
                     <tr key={row.comment_id}>
                       <td>
                         <Image
-                          src={`https://bushro-backend.herokuapp.com/${row.comment_img}`}
+                          src={`${API}/${row.comment_img}`}
                           width="100"
                           height="100"
                           alt=""
-                          loader={() =>
-                            `https://bushro-backend.herokuapp.com/${row.comment_img}`
-                          }
+                          loader={() => `${API}/${row.comment_img}`}
                         />
                       </td>
                       <td>{row.comment_name}</td>

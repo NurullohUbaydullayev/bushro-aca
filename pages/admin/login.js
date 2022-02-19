@@ -6,7 +6,7 @@ const Login = () => {
   const elPasswordInput = useRef(null);
   const [message, setMessage] = useState("");
 
-  const API = "https://bushro-backend.herokuapp.com";
+  const API = "http://46.101.204.245:5001";
 
   async function handleSubmit(evt) {
     evt.preventDefault();

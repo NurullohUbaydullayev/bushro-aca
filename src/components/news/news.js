@@ -26,12 +26,14 @@ import SwiperCore, { Pagination } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 
 const News = () => {
+  const API = "http://46.101.204.245:5001";
+
   const [data, setData] = useState([]);
 
   const fetchDatas = async () => {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
 
-    const res = await fetch("https://bushro-backend.herokuapp.com/news", {
+    const res = await fetch(API + "/news", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -101,13 +103,11 @@ const News = () => {
                   <div className="slider__img-wrapper">
                     <Image
                       className="slider__img"
-                      src={`https://bushro-backend.herokuapp.com/${row.news_img}`}
+                      src={`${API}/${row.news_img}`}
                       width="250"
                       height="330"
                       alt=""
-                      loader={() =>
-                        `https://bushro-backend.herokuapp.com/${row.news_img}`
-                      }
+                      loader={() => `${API}/${row.news_img}`}
                     />
                   </div>
                   <div className="slider__wrapper">

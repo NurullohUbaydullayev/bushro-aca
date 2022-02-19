@@ -15,12 +15,14 @@ import SwiperCore, { Pagination } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 
 const Comments = () => {
+  const API = "http://46.101.204.245:5001";
+
   const [data, setData] = useState([]);
 
   async function fetchDatas() {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
 
-    const res = await fetch("https://bushro-backend.herokuapp.com/allComments", {
+    const res = await fetch(API + "/allComments", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -58,11 +60,11 @@ const Comments = () => {
               <div>
                 <Image
                   className="comments__user-img"
-                  src={`https://bushro-backend.herokuapp.com/${row.comment_img}`}
+                  src={`${API}/${row.comment_img}`}
                   alt="user comments "
                   width="100"
                   height="100"
-                  loader={() => `https://bushro-backend.herokuapp.com/${row.comment_img}`}
+                  loader={() => `${API}/${row.comment_img}`}
                 />
                 <h3 className="comments__username">{row.comment_name}</h3>
                 <p className="comments__text">{row.comment_info}</p>
