@@ -5,16 +5,16 @@ import { Navigation } from "swiper";
 import moment from "moment";
 
 // images
-import Img1 from "../../assets/images/img1.jpg";
-import Img2 from "../../assets/images/img2.png";
-import Img3 from "../../assets/images/img3.jpg";
-import Img4 from "../../assets/images/img4.jpg";
-import Img5 from "../../assets/images/img5.jpg";
-import Img6 from "../../assets/images/img6.jpg";
-import Img7 from "../../assets/images/img7.jpg";
-import Img8 from "../../assets/images/img8.jpg";
-import Img9 from "../../assets/images/img9.jpg";
-import Img10 from "../../assets/images/img10.jpg";
+// import Img1 from "../../assets/images/img1.jpg";
+// import Img2 from "../../assets/images/img2.png";
+// import Img3 from "../../assets/images/img3.jpg";
+// import Img4 from "../../assets/images/img4.jpg";
+// import Img5 from "../../assets/images/img5.jpg";
+// import Img6 from "../../assets/images/img6.jpg";
+// import Img7 from "../../assets/images/img7.jpg";
+// import Img8 from "../../assets/images/img8.jpg";
+// import Img9 from "../../assets/images/img9.jpg";
+// import Img10 from "../../assets/images/img10.jpg";
 import Triangle1 from "../../assets/images/triangleIcon1.png";
 // css
 import "swiper/css";
@@ -45,7 +45,6 @@ const News = () => {
       Router.push("/admin/login");
     } else if (res.status === 200) {
       const requests = await res.json();
-      console.log(requests.data);
       setData(requests.data);
     }
   };
@@ -120,150 +119,6 @@ const News = () => {
                 </div>
               </SwiperSlide>
             ))}
-          {/* <SwiperSlide>
-            <div className="swiperslide__div-wrapper">
-              <div className="slider__img-wrapper">
-                <Image className="slider__img" src={Img1} width="250" height="330" />
-              </div>
-              <div className="slider__wrapper">
-                <p className="slider__date">07.12.2021</p>
-                <h4 className="sldier__heading">
-                  Рождественские занятия на английском для детей
-                </h4>
-                <p className="slider__text">
-                  Рождественские занятия на английском для детей.…
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="swiperslide__div-wrapper">
-              <div className="slider__img-wrapper">
-                <Image className="slider__img" src={Img2} width="250" height="330" />
-              </div>
-              <div className="slider__wrapper">
-                <p className="slider__date">07.12.2021</p>
-                <h4 className="sldier__heading">
-                  Рождественские занятия на английском для детей
-                </h4>
-                <p className="slider__text">
-                  Рождественские занятия на английском для детей.…
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="swiperslide__div-wrapper">
-              <div className="slider__img-wrapper">
-                <Image className="slider__img" src={Img3} width="250" height="330" />
-              </div>
-              <div className="slider__wrapper">
-                <p className="slider__date">07.12.2021</p>
-                <h4 className="sldier__heading">
-                  Рождественские занятия на английском для детей
-                </h4>
-                <p className="slider__text">
-                  Рождественские занятия на английском для детей.…
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="swiperslide__div-wrapper">
-              <div className="slider__img-wrapper">
-                <Image className="slider__img" src={Img4} width="250" height="330" />
-              </div>
-              <div className="slider__wrapper">
-                <p className="slider__date">07.12.2021</p>
-                <h4 className="sldier__heading">
-                  Рождественские занятия на английском для детей
-                </h4>
-                <p className="slider__text">
-                  Рождественские занятия на английском для детей.…
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="swiperslide__div-wrapper">
-              <div className="slider__img-wrapper">
-                <Image className="slider__img" src={Img5} width="250" height="330" />
-              </div>
-              <div className="slider__wrapper">
-                <p className="slider__date">07.12.2021</p>
-                <h4 className="sldier__heading">
-                  Рождественские занятия на английском для детей
-                </h4>
-                <p className="slider__text">
-                  Рождественские занятия на английском для детей.…
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="swiperslide__div-wrapper">
-              <div className="slider__img-wrapper">
-                <Image className="slider__img" src={Img6} width="250" height="330" />
-              </div>
-              <div className="slider__wrapper">
-                <p className="slider__date">07.12.2021</p>
-                <h4 className="sldier__heading">
-                  Рождественские занятия на английском для детей
-                </h4>
-                <p className="slider__text">
-                  Рождественские занятия на английском для детей.…
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="swiperslide__div-wrapper">
-              <div className="slider__img-wrapper">
-                <Image className="slider__img" src={Img7} width="250" height="330" />
-              </div>
-              <div className="slider__wrapper">
-                <p className="slider__date">07.12.2021</p>
-                <h4 className="sldier__heading">
-                  Рождественские занятия на английском для детей
-                </h4>
-                <p className="slider__text">
-                  Рождественские занятия на английском для детей.…
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="swiperslide__div-wrapper">
-              <div className="slider__img-wrapper">
-                <Image className="slider__img" src={Img8} width="250" height="330" />
-              </div>
-              <div className="slider__wrapper">
-                <p className="slider__date">07.12.2021</p>
-                <h4 className="sldier__heading">
-                  Рождественские занятия на английском для детей
-                </h4>
-                <p className="slider__text">
-                  Рождественские занятия на английском для детей.…
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="swiperslide__div-wrapper">
-              <div className="slider__img-wrapper">
-                <Image className="slider__img" src={Img9} width="250" height="330" />
-              </div>
-              <div className="slider__wrapper">
-                <p className="slider__date">07.12.2021</p>
-                <h4 className="sldier__heading">
-                  Рождественские занятия на английском для детей
-                </h4>
-                <p className="slider__text">
-                  Рождественские занятия на английском для детей.…
-                </p>
-              </div>
-            </div>
-          </SwiperSlide> */}
         </Swiper>
         <div className="news__btnController">
           <button className="news_prev-btn news__controllers">

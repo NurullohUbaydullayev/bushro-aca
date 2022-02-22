@@ -33,7 +33,6 @@ const Comments = () => {
     if (res.status === 400) {
     } else if (res.status === 200) {
       const requests = await res.json();
-      console.log(requests.data);
       setData(requests.data);
     }
   }
