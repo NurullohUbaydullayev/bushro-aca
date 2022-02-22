@@ -11,12 +11,15 @@ import Branches from "../src/components/Branches/branches";
 import News from "../src/components/news/news";
 import Comments from "../src/components/comments/comments";
 
+// Images
+
 export default function Home({ post }) {
   return (
     <>
       <Head>
         <title>Bushro o`quv markazi</title>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
+        <link rel="shortcut icon" href="" type="image/x-icon" />
         <meta
           name="keywords"
           content="Bushro, Bushro o`quv markazi, akademiya, arab tili, ingliz tili, turk tili, arzon"

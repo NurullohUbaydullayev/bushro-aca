@@ -9,27 +9,46 @@ const Orders = () => {
 
   const API = "https://api.bushroacademy.uz";
 
-  useEffect(() => {
-    async function func() {
-      const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
-      const res = await fetch(API + "/allBooking", {
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          token: token,
-        },
-      });
+  async function func() {
+    const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
+    const res = await fetch(API + "/allBooking", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        token: token,
+      },
+    });
 
-      if (res.status === 400) {
-        Router.push("/admin/login");
-      } else if (res.status === 200) {
-        const requests = await res.json();
-        setData(requests.data.reverse());
-      }
+    if (res.status === 400) {
+      Router.push("/admin/login");
+    } else if (res.status === 200) {
+      const requests = await res.json();
+      setData(requests.data.reverse());
     }
+  }
 
+  useEffect(() => {
     func();
   }, []);
+
+  async function DeleteRequest(evt) {
+    const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
+    const res = await fetch(API + "/deleteBooking/" + evt.target.dataset.delete_id, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        token: token,
+      },
+      method: "DELETE",
+    });
+
+    if (res.status === 400) {
+      Router.push("/admin/login");
+    } else if (res.status === 200) {
+      const request = await res.json();
+      func();
+    }
+  }
 
   useEffect(() => {}, [data]);
   return (
@@ -71,6 +90,7 @@ const Orders = () => {
                   <th>Arizachining ismi</th>
                   <th>Telefon raqami</th>
                   <th>Email addressi</th>
+                  <th>O`chirish</th>
                 </tr>
                 {data.map(row => (
                   <tr key={row.booking_id}>
@@ -78,6 +98,11 @@ const Orders = () => {
                     <td>{row.booking_name}</td>
                     <td>{row.booking_phone}</td>
                     <td>{row.booking_gmail}</td>
+                    <td>
+                      <button data-delete_id={row.booking_id} onClick={DeleteRequest}>
+                        O`chirish
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
