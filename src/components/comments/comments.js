@@ -15,7 +15,7 @@ import SwiperCore, { Pagination } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 
 const Comments = () => {
-  const API = "http://46.101.204.245:5001";
+  const API = "https://api.bushroacademy.uz";
 
   const [data, setData] = useState([]);
 

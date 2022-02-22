@@ -82,7 +82,7 @@ const Layout = ({ children }) => {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const res = await fetch("https://bushro-backend.herokuapp.com/newBooking", {
+    const res = await fetch("https://api.bushroacademy.uz/newBooking", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

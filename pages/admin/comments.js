@@ -12,7 +12,7 @@ const Comments = () => {
   const message = useRef(null);
   const [data, setData] = useState([]);
 
-  const API = "http://46.101.204.245:5001";
+  const API = "https://api.bushroacademy.uz";
 
   async function fetchDatas() {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;

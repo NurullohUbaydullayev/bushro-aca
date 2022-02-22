@@ -26,7 +26,7 @@ import SwiperCore, { Pagination } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 
 const News = () => {
-  const API = "http://46.101.204.245:5001";
+  const API = "https://api.bushroacademy.uz";
 
   const [data, setData] = useState([]);
 

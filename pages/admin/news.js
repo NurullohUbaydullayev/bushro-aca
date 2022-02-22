@@ -17,7 +17,7 @@ const News = () => {
   const fetchDatas = async () => {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
 
-    const API = "http://46.101.204.245:5001";
+    const API = "https://api.bushroacademy.uz";
 
     const res = await fetch(API + "/news", {
       headers: {
@@ -45,14 +45,17 @@ const News = () => {
   async function handleDeleteData(evt) {
     const token = JSON.parse(window.localStorage.getItem("auth__token")) || false;
 
-    const res = await fetch(`http://46.101.204.245:5001/news/${evt.target.dataset.id}`, {
-      headers: {
-        token: token,
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      method: "DELETE",
-    });
+    const res = await fetch(
+      `https://api.bushroacademy.uz/news/${evt.target.dataset.id}`,
+      {
+        headers: {
+          token: token,
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        method: "DELETE",
+      }
+    );
 
     const result = await res.json();
     fetchDatas();
@@ -67,7 +70,7 @@ const News = () => {
     formData.append("news_title", elNameInput.current.value);
     formData.append("news_info", elInfoInput.current.value);
 
-    const res = await fetch("http://46.101.204.245:5001" + "/news", {
+    const res = await fetch("https://api.bushroacademy.uz" + "/news", {
       headers: {
         token: token,
       },
@@ -141,10 +144,10 @@ const News = () => {
                       <td>{row.news_name}</td>
                       <td>
                         <Image
-                          src={`http://46.101.204.245:5001/${row.news_img}`}
+                          src={`https://api.bushroacademy.uz/${row.news_img}`}
                           width="200"
                           height="100"
-                          loader={() => `http://46.101.204.245:5001/${row.news_img}`}
+                          loader={() => `https://api.bushroacademy.uz/${row.news_img}`}
                           alt="Bayram"
                         />
                       </td>

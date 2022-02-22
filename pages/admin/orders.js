@@ -7,7 +7,7 @@ import Loader from "../../src/assets/images/loader.gif";
 const Orders = () => {
   const [data, setData] = useState([]);
 
-  const API = "http://46.101.204.245:5001";
+  const API = "https://api.bushroacademy.uz";
 
   useEffect(() => {
     async function func() {
